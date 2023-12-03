@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="switch6">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0063402 -0.041255 -4.5858E-17"
+        rpy="0 0 0" />
+      <mass
+        value="90.964" />
+      <inertia
+        ixx="15.153"
+        ixy="-5.6488E-16"
+        ixz="-1.2509E-16"
+        iyy="2.3598"
+        iyz="7.0365E-16"
+        izz="13.416" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://switch6/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://switch6/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="empty_link">
+    <inertial>
+      <origin
+        xyz="-0.25 1.8956E-17 0"
+        rpy="0 0 0" />
+      <mass
+        value="13.17" />
+      <inertia
+        ixx="0.06305"
+        ixy="0"
+        ixz="0"
+        iyy="0.29333"
+        iyz="5.8656E-18"
+        izz="0.31848" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://switch6/meshes/empty_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://switch6/meshes/empty_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="empty_joint"
+    type="prismatic">
+    <origin
+      xyz="0.1 0 -0.2626"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="empty_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.4"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <dynamics
+      damping="0.001"
+      friction="0.01" />
+  </joint>
+</robot>

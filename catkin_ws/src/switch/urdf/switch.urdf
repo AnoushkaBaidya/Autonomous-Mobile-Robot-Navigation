@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="switch">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0063402 -0.10189 -6.192E-17"
+        rpy="0 0 0" />
+      <mass
+        value="90.964" />
+      <inertia
+        ixx="14.149"
+        ixy="-5.8195E-16"
+        ixz="-1.2902E-16"
+        iyy="2.3598"
+        iyz="1.0374E-15"
+        izz="12.412" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://switch/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://switch/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="switch_link">
+    <inertial>
+      <origin
+        xyz="0.25 -0.065703 -2.5956E-16"
+        rpy="0 0 0" />
+      <mass
+        value="13.17" />
+      <inertia
+        ixx="0.06305"
+        ixy="0"
+        ixz="0"
+        iyy="0.31848"
+        iyz="-3.0291E-18"
+        izz="0.29333" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://switch/meshes/switch_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://switch/meshes/switch_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="switch_link_joint"
+    type="prismatic">
+    <origin
+      xyz="-0.4 0 0.03487"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="switch_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.43452"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <dynamics
+      damping="0.001"
+      friction="0.1" />
+  </joint>
+</robot>
